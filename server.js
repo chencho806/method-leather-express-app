@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const productsController = require('./controllers/products.js');
 const DATABASE_URL = process.env.DATABASE_URL
 require('dotenv').config();
 
@@ -22,7 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 
 
 
-
+app.use('/products', productsController);
 
 
 
