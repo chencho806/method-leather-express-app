@@ -7,6 +7,13 @@ customRouter.get('/', (req, res) => {
     res.render('custom/index.ejs')
 });
 
+//New Route
+customRouter.get('/new', (req, res) => {
+    res.render('custom/new.ejs')
+});
+
+
+
 
 
 
