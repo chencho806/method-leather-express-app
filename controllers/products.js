@@ -24,10 +24,17 @@ productRouter.delete('/:id', (req, res) => {
     });
 });
 
+//Update Route
+productRouter.put('/:id', (req, res) => {
+    Product.findByIdAndUpdate(req.params.id, req.body, 
+        (error, updateProduct) => {
+        res.redirect(`/products/${req.params.id}`)
+    });
+});
+
 //Create Route
 productRouter.post('/', (req, res) => {
     Product.create(req.body, (error, createdProduct) => {
-
         res.redirect('/products')
     });
 });
