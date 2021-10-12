@@ -17,6 +17,10 @@ productRouter.get('/new', (req, res) => {
     res.render('new.ejs')
 });
 
+//Delete Route
+productRouter.delete('/:id', (req, res) => {
+    res.send('deleting...')
+});
 
 //Create Route
 productRouter.post('/', (req, res) => {

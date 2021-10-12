@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const methodOverride = require('method-override');
 const productsController = require('./controllers/products.js');
 const DATABASE_URL = process.env.DATABASE_URL
 require('dotenv').config();
@@ -20,6 +21,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'));
 
 
 
