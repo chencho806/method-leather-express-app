@@ -27,7 +27,7 @@ app.use(methodOverride('_method'));
 
 
 app.use('/products', productsController);
-app.use('/', indexController);
+app.use('/home', indexController);
 
 
 
