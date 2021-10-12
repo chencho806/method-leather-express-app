@@ -2,6 +2,16 @@ const express = require('express');
 const productRouter = express.Router();
 const Product = require('../models/product');
 
+
+//Index Route
+productRouter.get('/', (req, res) => {
+    Product.find({}, (error, allProducts) => {
+        res.render('index.ejs', {
+            products: allProducts
+        })
+    });
+});
+
 //New Route
 productRouter.get('/new', (req, res) => {
     res.render('new.ejs')
@@ -12,9 +22,17 @@ productRouter.get('/new', (req, res) => {
 productRouter.post('/', (req, res) => {
     Product.create(req.body, (error, createdProduct) => {
 
-        res.send(createdProduct)
+        res.redirect('/products')
     });
 });
+
+
+
+
+
+
+
+
 
 
 

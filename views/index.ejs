@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+</head>
+<body>
+    <header>
+        <h1>Handmade Leather Goods</h1>
+        </header>
+        <header>
+        </header>
+        <div class="container">
+            <nav>
+                <a href="/products/new">Add New Product</a>
+            </nav>
+            <% products.forEach(product => { %>
+            
+                <a href='/products/<%=product._id; %>'> <img src="<%=product.img; %>"></a>
+                <p><%=product.name; %></p>
+                <p>$<%=product.price; %></p>
+                <a href="/products/<%=product._id %>/edit">Edit</a>
+                <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE" />
+                </form>
+            <% }) %>
+        </div>
+</body>
+</html>
