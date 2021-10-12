@@ -2,8 +2,10 @@ const express = require('express');
 const productRouter = express.Router();
 const Product = require('../models/product');
 
-// //New Route
-// productRouter.get('')
+//New Route
+productRouter.get('/new', (req, res) => {
+    res.render('new.ejs')
+});
 
 
 //Create Route
