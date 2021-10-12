@@ -13,7 +13,12 @@ customRouter.get('/new', (req, res) => {
 });
 
 
-
+//Create Route
+customRouter.post('/', (req, res) => {
+    Custom.create(req.body, (error, createdProduct) => {
+        res.redirect('/custom/show.ejs')
+    });
+});
 
 
 
