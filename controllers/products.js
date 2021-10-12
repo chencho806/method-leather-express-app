@@ -19,7 +19,9 @@ productRouter.get('/new', (req, res) => {
 
 //Delete Route
 productRouter.delete('/:id', (req, res) => {
-    res.send('deleting...')
+    Product.findByIdAndRemove(req.params.id, (error, data) => {
+        res.redirect('/products')
+    });
 });
 
 //Create Route
