@@ -6,7 +6,7 @@ const Product = require('../models/product');
 //Index Route
 productRouter.get('/', (req, res) => {
     Product.find({}, (error, allProducts) => {
-        res.render('index.ejs', {
+        res.render('products/index.ejs', {
             products: allProducts,
         });
     });
@@ -14,7 +14,7 @@ productRouter.get('/', (req, res) => {
 
 //New Route
 productRouter.get('/new', (req, res) => {
-    res.render('new.ejs')
+    res.render('products/new.ejs')
 });
 
 //Delete Route
@@ -42,18 +42,16 @@ productRouter.post('/', (req, res) => {
 //Edit Route
 productRouter.get('/:id/edit', (req, res) => {
     Product.findById(req.params.id, (error, foundProduct) => {
-        res.render('edit.ejs', {
+        res.render('products/edit.ejs', {
             product: foundProduct,
         });
     });
 });
 
-
-
 //Show Route
 productRouter.get('/:id', (req, res) => {
     Product.findById(req.params.id, (error, foundProduct) => {
-        res.render('show.ejs', {
+        res.render('products/show.ejs', {
             products: foundProduct,
         });
         
