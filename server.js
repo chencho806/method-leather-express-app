@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const productsController = require('./controllers/products.js');
+const customController = require('./controllers/custom.js')
 const indexController = require('./controllers/index.js');
 const DATABASE_URL = process.env.DATABASE_URL
 require('dotenv').config();
@@ -26,6 +27,7 @@ app.use(methodOverride('_method'));
 
 
 
+app.use('/custom', customController);
 app.use('/products', productsController);
 app.use('/home', indexController);
 
