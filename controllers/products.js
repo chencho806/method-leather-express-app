@@ -27,6 +27,16 @@ productRouter.post('/', (req, res) => {
 });
 
 
+//Show Route
+productRouter.get('/:id', (req, res) => {
+    Product.findById(req.params.id, (error, foundProduct) => {
+        res.render('show.ejs', {
+            products: foundProduct
+        })
+        
+    });
+});
+
 
 
 
