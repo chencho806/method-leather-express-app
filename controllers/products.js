@@ -7,8 +7,8 @@ const Product = require('../models/product');
 productRouter.get('/', (req, res) => {
     Product.find({}, (error, allProducts) => {
         res.render('index.ejs', {
-            products: allProducts
-        })
+            products: allProducts,
+        });
     });
 });
 
@@ -32,13 +32,23 @@ productRouter.post('/', (req, res) => {
     });
 });
 
+//Edit Route
+productRouter.get('/:id/edit', (req, res) => {
+    Product.findById(req.params.id, (error, foundProduct) => {
+        res.render('edit.ejs', {
+            product: foundProduct,
+        });
+    });
+});
+
+
 
 //Show Route
 productRouter.get('/:id', (req, res) => {
     Product.findById(req.params.id, (error, foundProduct) => {
         res.render('show.ejs', {
-            products: foundProduct
-        })
+            products: foundProduct,
+        });
         
     });
 });
