@@ -1,0 +1,43 @@
+* {
+    box-sizing:border-box;
+}
+
+
+
+
+.home {
+    background: url("https://i.imgur.com/9VB0u12.png") no-repeat center center fixed;
+    background-size: cover;
+    
+}
+
+/* header {
+    background-color: #0c2043;
+    display: flex;
+    align-items: center;
+    height: 5.125rem;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+
+li {
+    display: inline;
+    padding: 16px;
+    
+}
+
+#homeNav {
+    padding-top: 14px;
+}
+  
+
+a:link{
+    text-decoration: none;
+    
+}
+
+a:hover{
+    text-decoration: underline;
+} */

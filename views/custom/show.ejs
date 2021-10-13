@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/normalize.css" />
+    <link rel="stylesheet" href="/skeleton.css" />
+    <title>Custom Work</title>
 </head>
 <body>
     <div class="container">
@@ -15,8 +18,6 @@
           <img src="<%=custom.img %>">
           <p><%=custom.description; %></p>
           
-          <form action="/custom/<%=custom.id%>/buy?_method=PUT" method="POST">
-            <input type="submit" value="BUY">
-        </form>
+          
 </body>
 </html>

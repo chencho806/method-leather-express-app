@@ -23,7 +23,13 @@ customRouter.delete('/:id', (req, res) => {
     });
 });
 
-
+//Update Route
+customRouter.put('/:id', (req, res) => {
+    Custom.findByIdAndUpdate(req.params.id, req.body, 
+        (error, custom) => {
+        res.redirect(`/custom/${req.params.id}`)
+    });
+});
 
 //Create Route
 customRouter.post('/', (req, res) => {
