@@ -23,6 +23,8 @@ customRouter.delete('/:id', (req, res) => {
     });
 });
 
+
+
 //Create Route
 customRouter.post('/', (req, res) => {
     Custom.create(req.body, (error, custom) => {
@@ -32,7 +34,14 @@ customRouter.post('/', (req, res) => {
 
 
 
-
+//Edit Route
+customRouter.get('/:id/edit', (req, res) => {
+    Custom.findById(req.params.id, (error, custom) => {
+        res.render('custom/edit.ejs', {
+            custom,
+        });
+    });
+});
 
 
 

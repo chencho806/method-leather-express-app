@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <nav>
+        <a href="/custom">Back</a>
+      </nav>
+    <h1>Edit</h1>
+    <div class="container">
+    <form action="/custom/<%=custom._id%>?_method=PUT" method="POST">
+        
+        <input type="text" name="description" value="<%=custom.description; %>" placeholder="Description"/><br />
+         
+        <input type="url" name="img" value="<%=custom.img; %>" placeholder="Image"/><br />
+         
+        <input type="submit" name="" value="Submit" />
+      </form>
+     </div> 
+ </body>
+ </html>
+        
+        
+       
+        
+       
