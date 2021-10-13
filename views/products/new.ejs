@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="/skeleton.css" />
     <title>Store</title>
 </head>
+<header>
   <nav>
     <a href="/products">Back</a>
   </nav>
-<body>
+</header>
+  <body>
+  <div class="container">
     <h1>New Product</h1>
     <form action="/products" method="POST">
         <input type="text" name="name" placeholder="Name"/><br />
@@ -22,6 +25,6 @@
         <input type="text" name="qty" placeholder="Quantity"/><br />
         <input type="submit" name="" value="Add" />
     </form>
-    
-</body>
+  </div>
+  </body>
 </html>

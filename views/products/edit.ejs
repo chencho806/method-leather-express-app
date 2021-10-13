@@ -10,11 +10,13 @@
     <title>Custom Work</title>
 </head>
 <body>
+  <header>
       <nav>
         <a href="/products">Back</a>
       </nav>
-    <h1>Edit Product</h1>
+    </header>
     <div class="container">
+      <h1>Edit Product</h1>
     <form action="/products/<%=product._id%>?_method=PUT" method="POST">
         
         <input type="text" name="name" value="<%=product.name; %>" placeholder="Name"/><br />

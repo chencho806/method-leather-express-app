@@ -9,20 +9,19 @@
     <link rel="stylesheet" href="/skeleton.css" />
     <title>Shop</title>
 </head>
-<body>
-      <nav>
-        <a href="/home">Back</a>
-      </nav>
-    <header>
-        <h1>Handmade Leather Goods</h1>
+<body id="indexBody">
+       <header>
+        <nav>
+          <a href="/home">Home</a>
+        </nav>
+        
         </header>
-        <header>
-        </header>
+        
+        <% products.forEach(product => { %>
         <div class="container">
             <nav>
-                <a href="/products/new">Add New Product</a>
+                <a href="/products/new">+</a>
             </nav>
-            <% products.forEach(product => { %>
             
                 <a href='/products/<%=product._id; %>'> <img src="<%=product.img; %>"></a>
                 <p><%=product.name; %></p>
@@ -31,7 +30,7 @@
                 <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
                 <input type="submit" value="DELETE" />
                 </form>
+            </div>
             <% }) %>
-        </div>
 </body>
 </html>
