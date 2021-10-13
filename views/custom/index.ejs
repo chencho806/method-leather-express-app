@@ -11,7 +11,7 @@
         <a href="/home">Back</a>
       </nav>
     <header>
-        <h1>Handmade Leather Goods</h1>
+        <h1>Custom Work</h1>
         </header>
         <header>
         </header>
@@ -20,16 +20,13 @@
                 <a href="/custom/new">Add New Product</a>
             </nav>
             <% custom.forEach(custom => { %>
-            
                 <a href='/custom/<%=custom._id; %>'> <img src="<%=custom.img; %>"></a>
-                <p><%=custom.name; %></p>
-                <p>$<%=custom.price; %></p>
                 <a href="/custom/<%=custom._id %>/edit">Edit</a>
                 <form action="/custom/<%= custom._id %>?_method=DELETE" method="POST">
                 <input type="submit" value="DELETE" />
                 </form>
             <% }) %>
         </div>
-
 </body>
 </html>
+            

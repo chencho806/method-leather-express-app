@@ -11,8 +11,12 @@
         <nav>
             <a href="/custom">Back</a>
           </nav>
-          <img src="">
+          
+          <img src="<%=custom.img %>">
           <p><%=custom.description; %></p>
-         </div>
+          
+          <form action="/custom/<%=custom.id%>/buy?_method=PUT" method="POST">
+            <input type="submit" value="BUY">
+        </form>
 </body>
 </html>

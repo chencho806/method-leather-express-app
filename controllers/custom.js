@@ -16,13 +16,24 @@ customRouter.get('/new', (req, res) => {
     res.render('custom/new.ejs')
 });
 
+//Delete Route
+customRouter.delete('/:id', (req, res) => {
+    Custom.findByIdAndRemove(req.params.id, (error, data) => {
+        res.redirect('/custom')
+    });
+});
 
 //Create Route
 customRouter.post('/', (req, res) => {
-    Custom.create(req.body, (error, createdProduct) => {
-        res.redirect('/custom/show.ejs')
+    Custom.create(req.body, (error, custom) => {
+        res.redirect('/custom')
     });
 });
+
+
+
+
+
 
 
 //Show Route
