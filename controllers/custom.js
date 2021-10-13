@@ -4,7 +4,11 @@ const Custom = require('../models/custom');
 
 //Index Route
 customRouter.get('/', (req, res) => {
-    res.render('custom/index.ejs')
+    Custom.find({}, (error, custom) => {
+        res.render('custom/index.ejs', {
+            custom
+        });
+    });
 });
 
 //New Route
@@ -20,6 +24,17 @@ customRouter.post('/', (req, res) => {
     });
 });
 
+
+//Show Route
+customRouter.get('/:id', (req, res) => {
+    Custom.findById(req.params.id, (error, custom) => {
+        console.log(custom)
+        res.render('custom/show.ejs', {
+            custom
+        });
+        
+    });
+});
 
 
 
