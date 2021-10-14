@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/normalize.css" />
     <link rel="stylesheet" href="/skeleton.css" />
+    <link rel="stylesheet" href="/style.css">
     <title>Shop</title>
 </head>
 <body id="indexBody">
@@ -16,9 +16,11 @@
         </nav>
         
         </header>
-        
-        <% products.forEach(product => { %>
-        <div class="container">
+        <main>
+            
+            <% products.forEach(product => { %>
+                
+                <div class="container">
             <nav>
                 <a href="/products/new">+</a>
             </nav>
@@ -31,6 +33,8 @@
                 <input type="submit" value="DELETE" />
                 </form>
             </div>
-            <% }) %>
+                <% }) %>
+            
+        </main>
 </body>
 </html>
