@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/normalize.css" />
     <link rel="stylesheet" href="/skeleton.css" />
+    <link rel="stylesheet" href="/style.css">
     <title>Custom Work</title>
 </head>
-<body>
+<body class="indexBody">
     <header>
     <nav>
         <a href="/home">Back</a>
       </nav>
-        
-        </header>
+    </header>
+    <h1>Gallery</h1>
+        <main>
+    <% custom.forEach(custom => { %>
         <div class="container">
             <nav>
                 <a href="/custom/new">+</a>
             </nav>
-            <% custom.forEach(custom => { %>
                 <a href='/custom/<%=custom._id; %>'> <img src="<%=custom.img; %>"></a>
                 <a href="/custom/<%=custom._id %>/edit">Edit</a>
                 <form action="/custom/<%= custom._id %>?_method=DELETE" method="POST">
                 <input type="submit" value="DELETE" />
                 </form>
+            </div>
             <% }) %>
-        </div>
+    </main>
 </body>
 </html>
             

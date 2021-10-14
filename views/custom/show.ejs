@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/normalize.css" />
     <link rel="stylesheet" href="/skeleton.css" />
+    <link rel="stylesheet" href="/style.css">
     <title>Custom Work</title>
 </head>
-<body>
-    <div class="container">
+<body class="showBody">
+    <header>
         <nav>
             <a href="/custom">Back</a>
-          </nav>
-          
-          <img src="<%=custom.img %>">
-          <p><%=custom.description; %></p>
-          
-          
+        </nav>
+    </header>
+    <main>
+    
+    <div class="container">
+        
+        <img src="<%=custom.img %>">
+        <p><%=custom.description; %></p>
+        
+    </div>
+</main>
 </body>
 </html>

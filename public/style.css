@@ -46,13 +46,14 @@ a:hover{
 
 
 /*INDEX PAGE*/
-#indexBody {
+.indexBody {
     display: flex;
     flex-direction: column; 
     min-height: 100vh;
     background-color: white;
     margin: 0;
     justify-content: center;
+    text-align: center;
     
 }
 
@@ -60,12 +61,12 @@ header {
     background-color: #0c2043;
     display: flex;
     height: 5.125rem;
-    justify-content: center;
+    justify-content: left;
 }
 
 nav {
     padding-top: 16px;
-    padding-left: 16px;
+    margin-left: 16px;
 }
 
 main {
@@ -84,5 +85,23 @@ div.container {
     width: 25rem;
     /* height: 20rem; */
     border-radius: 3px;
-    justify-content: center;    
+    justify-content: center;
+    text-align: center;    
 }
+
+
+
+/*Show Pages*/
+
+
+.showBody{
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+    background-color: white;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+
