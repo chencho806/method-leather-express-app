@@ -26,6 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
 
+app.get('/', (req, res) => res.redirect('/home'));
 
 app.use('/custom', customController);
 app.use('/products', productsController);
