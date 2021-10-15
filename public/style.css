@@ -69,6 +69,11 @@ nav {
     margin-left: 16px;
 }
 
+nav.add {
+    padding-top: 16px;
+    text-align: right;
+}
+
 main {
     flex-grow: 1;
     flex-direction: row;
@@ -80,6 +85,7 @@ main {
 
 
 div.container {
+    padding-top: 10%;
     display:flex;
     flex-direction: column;
     width: 25rem;

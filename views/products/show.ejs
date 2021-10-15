@@ -17,11 +17,10 @@
     </header>
     <main>
     <div class="container">
-          <h1><%=products.name; %></h1>
+          <h4><%=products.name; %></h4>
           <img src="<%=products.img %>">
           <p><%=products.description; %></p>
           <p>$<%=products.price; %></p>
-          <p><%=products.qty; %> Remaining</p>
           <form action="/products/<%=products.id%>/buy?_method=PUT" method="POST">
             <input type="submit" value="BUY">
         </form>

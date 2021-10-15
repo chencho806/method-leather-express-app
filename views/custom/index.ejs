@@ -14,14 +14,14 @@
     <nav>
         <a href="/home">Back</a>
       </nav>
+      <nav>
+          <a href="/custom/new">+</a>
+      </nav>
     </header>
     <h1>Gallery</h1>
         <main>
     <% custom.forEach(custom => { %>
         <div class="container">
-            <nav>
-                <a href="/custom/new">+</a>
-            </nav>
                 <a href='/custom/<%=custom._id; %>'> <img src="<%=custom.img; %>"></a>
                 <a href="/custom/<%=custom._id %>/edit">Edit</a>
                 <form action="/custom/<%= custom._id %>?_method=DELETE" method="POST">
